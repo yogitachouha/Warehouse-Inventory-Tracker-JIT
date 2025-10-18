@@ -32,11 +32,17 @@ public int getThreshold()
 }
 public void increaseQuantity(int amount) 
 {
+	if (amount <= 0) {
+        System.out.println("Invalid shipment quantity.");
+        return;
+    }
+
     quantity += amount;
 }
 
 public boolean decreaseQuantity(int amount) 
 {
+
     if (quantity >= amount) {
         quantity -= amount;
         return true;
