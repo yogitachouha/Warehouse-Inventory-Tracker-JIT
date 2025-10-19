@@ -42,6 +42,10 @@ public void increaseQuantity(int amount)
 
 public boolean decreaseQuantity(int amount) 
 {
+	if (amount <= 0) {
+        System.out.println("Invalid order quantity.");
+        return false;
+    }
 
     if (quantity >= amount) {
         quantity -= amount;
