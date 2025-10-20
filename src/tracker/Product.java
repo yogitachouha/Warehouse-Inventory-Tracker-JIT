@@ -30,6 +30,9 @@ public int getThreshold()
 { 
 	return threshold; 
 }
+public void setThreshold(int threshold) {
+    this.threshold = threshold;
+}
 public void increaseQuantity(int amount) 
 {
 	if (amount <= 0) {

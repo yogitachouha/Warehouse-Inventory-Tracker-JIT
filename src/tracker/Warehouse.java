@@ -34,5 +34,13 @@ public class Warehouse {
             observer.onLowStock(product);
         }
     }
-
+	public void updateThreshold(String productId, int newThreshold) {
+	    Product product = inventory.get(productId);
+	    if (product != null) {
+	        product.setThreshold(newThreshold);
+	        System.out.println(" Threshold updated for " + product.getName() + " to " + newThreshold);
+	    } else {
+	        System.out.println(" Product not found.");
+	    }
+	}
 }
