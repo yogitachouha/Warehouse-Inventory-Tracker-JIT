@@ -43,4 +43,12 @@ public class Warehouse {
 	        System.out.println(" Product not found.");
 	    }
 	}
+	public void removeProduct(String productId) {
+	    if (inventory.containsKey(productId)) {
+	        Product removed = inventory.remove(productId);
+	        System.out.println("🗑️ Product '" + removed.getName() + "' (ID: " + removed.getId() + ") removed from inventory.");
+	    } else {
+	        System.out.println("❌ Product ID '" + productId + "' not found.");
+	    }
+	}
 }
