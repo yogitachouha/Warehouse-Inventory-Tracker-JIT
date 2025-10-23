@@ -51,4 +51,13 @@ public class Warehouse {
 	        System.out.println("❌ Product ID '" + productId + "' not found.");
 	    }
 	}
+	public List<Product> getLowStockProducts() {
+	    List<Product> lowStock = new ArrayList<>();
+	    for (Product product : inventory.values()) {
+	        if (product.getQuantity() <= product.getThreshold()) {
+	            lowStock.add(product);
+	        }
+	    }
+	    return lowStock;
+	}
 }
